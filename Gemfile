@@ -30,16 +30,14 @@ gem 'spring',        group: :development
 # Paperclip to handle image upload
  gem "paperclip", "~> 4.2"
 
- group :development, :test do
-    # Use mysql as the database for Active Record
-    gem 'mysql2'
-end
+# Use mysql as the database for Active Record
+ gem 'mysql2', group: :development
 
-group :production do
+
+
     # Use PostgrisSQL as the database on HEROKU
-    gem 'pd'
-    gem 'rails_12factor'
-end
+gem 'pd', group: :production
+gem 'rails_12factor', group: :production
 
 # Use unicorn as the app server
 # gem 'unicorn'
