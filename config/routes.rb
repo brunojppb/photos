@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'users/index'
+
+  get 'users/new'
+
+  get 'users/edit'
+
+  get 'users/delete'
+
   root :to => 'photos#index'
 
   match ':controller(/:action(/:id))', :via => [:get, :post]

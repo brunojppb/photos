@@ -31,13 +31,15 @@ gem 'spring',        group: :development
  gem "paperclip", "~> 4.2"
 
 # Use mysql as the database for Active Record
- #gem 'mysql2', group: :development
+ gem 'mysql2', group: :development
 
-
-
-    # Use PostgrisSQL as the database on HEROKU
+# Use PostgrisSQL as the database on HEROKU
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
+
+#Wtitter Bootstrap
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 # Use unicorn as the app server
 # gem 'unicorn'

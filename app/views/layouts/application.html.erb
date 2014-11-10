@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Photos</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+    <head>
+    <title>Photos</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
 <body>
-<h1>Photos App</h1>
-<%= yield %>
-<hr>
-<strong>Bruno Paulino</strong>
+    
+    <div class="container">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Photo Upload App</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <%= yield %>
+            </div>
+        </div>
+    </div>
+    <!-- Rails code here -->
+    <hr>
+    <strong>Bruno Paulino</strong>
 </body>
 </html>

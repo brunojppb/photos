@@ -1,7 +1,4 @@
 
-<h1>
-    Photos on Database
-</h1>
 <ul>
     <% @photos.each do |p|%>
     <li><%= image_tag p.image.url(:medium) %></li>
