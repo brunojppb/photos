@@ -36,7 +36,7 @@ gem 'spring',        group: :development
 
 
     # Use PostgrisSQL as the database on HEROKU
-gem 'pd', group: :production
+gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 
 # Use unicorn as the app server

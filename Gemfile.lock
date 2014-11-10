@@ -62,7 +62,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    pd (1.1.0)
+    pg (0.17.1)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -128,7 +128,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.2)
-  pd
+  pg
   rails (= 4.1.7)
   rails_12factor
   sass-rails (~> 4.0.3)
