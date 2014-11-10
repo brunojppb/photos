@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Photos</title>
+    <title><%= @page_title || "Photo app" %></title>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
@@ -10,6 +10,22 @@
     
     <div class="container">
         <div class="page-header">
+            <% if session[:username] %>
+                <div>
+                    <h5>Hello <%= session[:username] %> | <%= link_to("Log out", {:controller => "access", :action => 'logout'}) %></h3>
+                </div>
+            <% end %>
+            <% if flash["notice"] %>
+            <div class="alert alert-success" role="alert">
+                <%= flash["notice"] %>
+            </div>
+            <% end %>
+            <% if flash["error"] %>
+                <div class="alert alert-danger" role="alert">
+                    <%= flash["error"] %>
+                </div>
+            <% end %>
+            
             <div class="row">
                 <div class="col-md-12">
                     <h1>Photo Upload App</h1>

@@ -1,0 +1,7 @@
+<% @page_title = "Sign up" %>
+
+<%= form_for(:user, :url => { :action => 'sign_up_confirm'}) do |f|%>
+    <%= render(:partial => 'users/form', :locals => {:f => f}) %>
+
+    <%= submit_tag("Sign Up", :class => "btn btn-primary") %>
+<% end %>

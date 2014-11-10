@@ -1,0 +1,28 @@
+<div class="container">
+    
+    <%= link_to("Back", {:action => "index"}) %>
+
+    <% if @user.photos.size > 0 %>
+    <table>
+        <thead>
+            <tr>
+                <th>Image name</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @user.photos.each do |i| %>
+                <tr>
+                    <td><%= i.image_file_name %></td>
+                    <td>
+                        <%= image_tag(i.image.url(:medium)) %>
+                    </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+
+    <%else%>
+        <h2>No images Found</h2>
+    <% end %>
+</div>
