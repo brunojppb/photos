@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
-# Use mysql as the database for Active Record
-gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -31,6 +29,17 @@ gem 'spring',        group: :development
 
 # Paperclip to handle image upload
  gem "paperclip", "~> 4.2"
+
+ group :development, :test do
+    # Use mysql as the database for Active Record
+    gem 'mysql2'
+end
+
+group :production do
+    # Use PostgrisSQL as the database on HEROKU
+    gem 'pd'
+    gem 'rails_12factor'
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'
