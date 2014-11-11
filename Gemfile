@@ -37,9 +37,12 @@ gem 'spring',        group: :development
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 
-#Wtitter Bootstrap
+#Twitter Bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+
+#Amazon AWS
+gem 'aws-sdk'
 
 # Use unicorn as the app server
 # gem 'unicorn'

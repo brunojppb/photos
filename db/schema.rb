@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20141110002337) do
   create_table "photos", force: true do |t|
     t.integer  "user_id"
     t.boolean  "is_checked"
+    t.string   "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"

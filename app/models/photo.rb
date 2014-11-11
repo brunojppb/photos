@@ -10,4 +10,10 @@ class Photo < ActiveRecord::Base
     :default_url => "/images/:style/missing.png"
 
     validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
+
+    before_save do
+        self.image_url = self.image.url(:original)
+    end
+
 end

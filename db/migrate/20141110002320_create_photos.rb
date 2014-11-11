@@ -3,6 +3,7 @@ class CreatePhotos < ActiveRecord::Migration
     create_table :photos do |t|
         t.integer "user_id"
         t.boolean "is_checked"
+        t.string "image_url"
       t.timestamps
     end
   end

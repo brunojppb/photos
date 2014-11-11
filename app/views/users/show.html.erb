@@ -11,11 +11,11 @@
             </tr>
         </thead>
         <tbody>
-            <% @user.photos.each do |i| %>
+            <% @user.photos.each do |p| %>
                 <tr>
-                    <td><%= i.image_file_name %></td>
+                    <td><%= p.image_file_name %></td>
                     <td>
-                        <%= image_tag(i.image.url(:medium)) %>
+                        <%= image_tag p.image.url(:medium) %>
                     </td>
                 </tr>
             <% end %>
