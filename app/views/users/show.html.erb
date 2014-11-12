@@ -1,26 +1,12 @@
 <div class="container">
     
     <%= link_to("Back", {:action => "index"}) %>
+    <hr />
 
     <% if @user.photos.size > 0 %>
-    <table>
-        <thead>
-            <tr>
-                <th>Image name</th>
-                <th>Image</th>
-            </tr>
-        </thead>
-        <tbody>
             <% @user.photos.each do |p| %>
-                <tr>
-                    <td><%= p.image_file_name %></td>
-                    <td>
-                        <%= image_tag p.image.url(:medium) %>
-                    </td>
-                </tr>
+                        <%= link_to(image_tag(p.image.url(:thumb)), p.image.url(:original), :data => {:lightbox => "gallery"}) %>
             <% end %>
-        </tbody>
-    </table>
 
     <%else%>
         <h2>No images Found</h2>
